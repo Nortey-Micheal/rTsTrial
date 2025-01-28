@@ -1,15 +1,17 @@
 import { Navbar } from "./components/navbar"
 
+
 function App() {
   const navLinks = [
-    {label: 'Home',address: '/'},
+    {label: 'Home', address: '/'},
     {label: 'About', address: '/'},
-    {label: 'Contact Us', address: '/'}
+    {label: 'Contact Us', address: '/'},
+    {label:'New',address: '/'}
   ]
-  
+
   return (
     <>
-      <Navbar links={navLinks} image="../assets/react.svg"/>
+    <Navbar image="src/assets/react.svg" links={navLinks}/>
     </>
   )
 }

@@ -1,26 +1,24 @@
-type navbarLink = {
-    label:string,
+type link = {
+    label: string,
     address: string
 }
 
 type navbarProps = {
-    links: navbarLink[],
-    image: string,
-
+    links: link[],
+    image: string
 }
 
-export function Navbar({ links,image }:navbarProps) {
+export function Navbar({links,image}: navbarProps) {
     return (
-        <nav className="px-12 flex w-full justify-between bg-cyan-600">
+        <nav className="flex bg-cyan-600 justify-between px-10 py-3">
             <img src={image} alt="" />
-            <ul className="flex gap-10 p-4">
+            <ul className="flex gap-10">
                 {links.map((link,index) => {
                     return (
-                    <li className="bg-amber-200 px-4 rounded text-lg hover:bg-amber-800" key={index}><a href={link.address}> {link.label}</a>
-                    </li>
+                        <li className="text-lg bg-amber-300 w-24 text-center py-1 hover:bg-amber-800 hover:cursor-pointer hover:text-amber-100 rounded" key={index}><a className="w-full" href={link.address} >{link.label}</a></li>
                     )
                 })}
             </ul>
-       </nav>
-    )    
+        </nav>
+    )
 }
