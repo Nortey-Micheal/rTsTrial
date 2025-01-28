@@ -1,3 +1,4 @@
+import { Button } from "./components/button"
 import { Navbar } from "./components/navbar"
 
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
     <Navbar image="src/assets/react.svg" links={navLinks}/>
+    <Button />
     </>
   )
 }
